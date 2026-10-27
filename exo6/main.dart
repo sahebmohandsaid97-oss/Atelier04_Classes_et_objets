@@ -15,7 +15,6 @@ class ServeurAPI implements Connectable {
   }
 }
 
-// Classe BaseDeDonnees qui implémente Connectable
 class BaseDeDonnees implements Connectable {
   @override
   void connecter(String utilisateur) {
@@ -25,5 +24,20 @@ class BaseDeDonnees implements Connectable {
   @override
   void deconnecter() {
     print("BaseDeDonnees : Connexion fermée avec succès.");
+  }
+}
+
+void main() {
+  // Création d'une liste services de type List<Connectable> contenant les instances
+  List<Connectable> services = [
+    ServeurAPI(),
+    BaseDeDonnees(),
+  ];
+
+  // Parcours de la liste et exécution des méthodes pour chaque service
+  for (var service in services) {
+    service.connecter("Admin");
+    service.deconnecter();
+    print(""); // Ligne vide pour la lisibilité
   }
 }
