@@ -17,7 +17,6 @@ class Cercle extends Forme {
   }
 }
 
-// Classe Rectangle qui hérite de Forme
 class Rectangle extends Forme {
   final double longueur;
   final double largeur;
@@ -28,4 +27,18 @@ class Rectangle extends Forme {
   double calculerAire() {
     return longueur * largeur;
   }
+}
+
+void main() {
+  // Création des instances
+  Forme monCercle = Cercle(5.0);
+  Forme monRectangle = Rectangle(4.0, 6.0);
+
+  // Test pour le Cercle
+  monCercle.afficherMessage();
+  print("Aire du cercle : ${monCercle.calculerAire()}\n");
+
+  // Test pour le Rectangle
+  monRectangle.afficherMessage();
+  print("Aire du rectangle : ${monRectangle.calculerAire()}");
 }
