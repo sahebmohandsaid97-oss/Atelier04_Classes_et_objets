@@ -1,6 +1,10 @@
 class Tache {
   String description;
   
-  // Propriété statique partagée entre toutes les instances
   static int nombreTotal = 0;
+
+  // Constructeur simplifié qui incrémente nombreTotal à chaque instance créée
+  Tache(this.description) {
+    nombreTotal++;
+  }
 }
