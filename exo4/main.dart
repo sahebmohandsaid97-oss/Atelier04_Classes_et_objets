@@ -14,12 +14,22 @@ class Media {
 class Livre extends Media {
   final String auteur;
 
-  // Constructeur avec super pour initialiser le titre de la classe mère
   Livre(String titre, this.auteur) : super(titre);
 
-  // Redéfinition de la méthode afficherType
   @override
   void afficherType() {
     print("Ceci est un Livre : $titre par $auteur.");
+  }
+}
+
+// Classe Film qui hérite de Media
+class Film extends Media {
+  final int dureeMinutes;
+
+  Film(String titre, this.dureeMinutes) : super(titre);
+
+  @override
+  void afficherType() {
+    print("Ceci est un Film : $titre d'une durée de $dureeMinutes minutes.");
   }
 }
