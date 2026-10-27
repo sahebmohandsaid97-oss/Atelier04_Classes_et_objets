@@ -15,3 +15,17 @@ class Compte {
     }
   }
 }
+
+void main() {
+  // Création d'un compte
+  var monCompte = Compte("FR12345", 100.0);
+  
+  // Affichage du solde initial
+  print("Solde initial : ${monCompte.solde}");
+  
+  // Effectuer un dépôt
+  monCompte.depot(50.5);
+  
+  // Affichage du nouveau solde
+  print("Solde après dépôt : ${monCompte.solde}");
+}
