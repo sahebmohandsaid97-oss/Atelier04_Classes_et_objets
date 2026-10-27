@@ -7,7 +7,6 @@ class Tache {
     nombreTotal++;
   }
 }
-
 void main() {
   // Création de trois instances de Tache
   Tache t1 = Tache("Apprendre Dart");
