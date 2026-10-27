@@ -16,3 +16,15 @@ class Couleur {
     print('(R :$r, V :$g, B :$b)');
   }
 }
+
+void main() {
+  // Création des instances avec les constructeurs nommés
+  Couleur maCouleurRouge = Couleur.rouge();
+  Couleur maCouleurVert = Couleur.vert();
+  Couleur maCouleurBleu = Couleur.bleu();
+
+  // Affichage des couleurs
+  maCouleurRouge.afficherCouleur();
+  maCouleurVert.afficherCouleur();
+  maCouleurBleu.afficherCouleur();
+}
