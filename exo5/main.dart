@@ -6,7 +6,6 @@ abstract class Forme {
   }
 }
 
-// Classe Cercle qui hérite de Forme
 class Cercle extends Forme {
   final double rayon;
 
@@ -15,5 +14,18 @@ class Cercle extends Forme {
   @override
   double calculerAire() {
     return 3.14159 * rayon * rayon;
+  }
+}
+
+// Classe Rectangle qui hérite de Forme
+class Rectangle extends Forme {
+  final double longueur;
+  final double largeur;
+
+  Rectangle(this.longueur, this.largeur);
+
+  @override
+  double calculerAire() {
+    return longueur * largeur;
   }
 }
